@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
     'rest_framework_swagger',
+    'webpack_loader',
     'apps.landing',
 ]
 
@@ -152,8 +153,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'staticfiles'
 
 STATICFILES_DIRS = (
-   BASE_DIR + '/common-static',
+   BASE_DIR + '/assets',
 )
+
+# Rest framework
 
 SITE_ID = 1
 
@@ -163,6 +166,14 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',)
 }
 
+# webpack
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}
 
 # Email settings
 
