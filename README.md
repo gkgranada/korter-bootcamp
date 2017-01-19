@@ -12,8 +12,11 @@ virutalenv venv
 pip3 install -r requirements.txt
 npm install
 
-# run server
+# run server (make sure to restart virtual environment)
 gunicorn website.wsgi
+
+# run webpack once
+./node_modules/.bin/webpack --config webpack.config.js
 
 # run webpack in background
 ./node_modules/.bin/webpack --config webpack.config.js --watch
