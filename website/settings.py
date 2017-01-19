@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
     'rest_framework_swagger',
+    'apps.landing',
 ]
 
 MIDDLEWARE = [
