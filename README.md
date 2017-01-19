@@ -12,6 +12,9 @@ virutalenv venv
 pip3 install -r requirements.txt
 npm install
 
+# run migrations
+python3 manage.py migrate
+
 # run server (make sure to restart virtual environment)
 gunicorn website.wsgi
 
