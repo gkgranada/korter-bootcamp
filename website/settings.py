@@ -86,12 +86,25 @@ WSGI_APPLICATION = 'website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+# SQLITE database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# PostgreSQL database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'DATABASE_NAME',
+#         'USER': 'DATABASE_USER',
+#         'PASSWORD': 'DATABASE_PASSWORD',
+#         'HOST': 'DATABASE_HOST',
+#         'PORT': 'DATABASE_PORT',
+#     }
+# }
 
 # Uncomment this line if you want to deploy on Heroku
 # DATABASES['default'] =  dj_database_url.config()
@@ -142,5 +155,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',)
 }
+
+
+# Email settings
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
