@@ -63,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
 ]
 
 ROOT_URLCONF = 'website.urls'
@@ -109,7 +110,8 @@ DATABASES = {
 #     }
 # }
 
-# Uncomment this line if you want to deploy on Heroku
+# Uncomment these lines if you want to deploy on Heroku
+# DATABASES = {}
 # DATABASES['default'] =  dj_database_url.config()
 
 # Password validation
