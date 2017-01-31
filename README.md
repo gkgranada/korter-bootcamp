@@ -17,14 +17,4 @@ python3 manage.py migrate
 
 # run server (make sure to restart virtual environment)
 gunicorn website.wsgi
-
-# to use webpack, include these lines in templates
-{% load render_bundle from webpack_loader %}
-{% render_bundle 'main' %}
-
-# run webpack once
-./node_modules/.bin/webpack --config webpack.config.js
-
-# run webpack in background
-./node_modules/.bin/webpack --config webpack.config.js --watch
 ```
