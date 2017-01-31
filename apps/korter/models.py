@@ -28,14 +28,14 @@ class Comment(models.Model):
 class Building(models.Model):
     user = models.ForeignKey(User)
     address = models.CharField(max_length=250)
-    building_owner = models.ForeignKey(User, null=True)
+    # building_owner = models.ForeignKey(User, null=True)
 
 
 class Apartment(models.Model):
     building = models.ForeignKey(Building)
     floor = models.IntegerField()
-    apartment_number = model.CharField(max_length=250)
-    apartment_owner = models.ForeignKey(User, null=True)
+    apartment_number = models.CharField(max_length=250)
+    # apartment_owner = models.ForeignKey(User, null=True)
 
 
 class Account(models.Model):

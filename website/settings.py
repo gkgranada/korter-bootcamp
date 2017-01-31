@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'webpack_loader',
     'apps.landing',
+    'apps.korter',
 ]
 
 MIDDLEWARE = [
