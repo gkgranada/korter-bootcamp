@@ -15,3 +15,6 @@ def rules_view(request):
 
 def neighbour_view(request):
     return TemplateResponse(request, "korter/neighbours.html", {})
+
+def contract_view(request):
+    return TemplateResponse(request, "korter/contract.html", {})
