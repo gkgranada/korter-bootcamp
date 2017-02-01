@@ -12,3 +12,6 @@ def feed_view(request):
 
 def rules_view(request):
     return TemplateResponse(request, "korter/rules.html", {})
+
+def neighbour_view(request):
+    return TemplateResponse(request, "korter/neighbours.html", {})

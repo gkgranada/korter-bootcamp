@@ -6,5 +6,5 @@ urlpatterns = [
     url(r'^$', views.default_view, name='index'),
     url(r'^feed/$', views.feed_view, name='feed'),
     url(r'^rules/$', views.rules_view, name='rules'),
-
+    url(r'^neighbours/$', views.neighbour_view, name='neighbours'),
 ]
