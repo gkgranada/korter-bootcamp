@@ -31,7 +31,7 @@ SECRET_KEY = get_random_string(50, chars)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['whispering-inlet-70728.herokuapp.com']
+ALLOWED_HOSTS = ['whispering-inlet-70728.herokuapp.com', 'localhost']
 
 
 # Application definition
