@@ -18,3 +18,6 @@ def neighbour_view(request):
 
 def contract_view(request):
     return TemplateResponse(request, "korter/contract.html", {})
+
+def bill_view(request):
+    return TemplateResponse(request, "korter/bills.html", {})
