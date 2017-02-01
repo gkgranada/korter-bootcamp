@@ -3,5 +3,15 @@
 {% block title %}<title>Feed</title>{% endblock %}
 
 {% block content %}
-<p>Feed here</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      {% include "korter/event.html" %}
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-8">
+      {% include "korter/feedEntry.html" %}
+    </div>
+</div>
+</div>
+
 {% endblock %}

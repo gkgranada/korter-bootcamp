@@ -3,5 +3,19 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  padding: 20;
+  padding: 5%;
+}
+.feedEntry-icon {
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 5%;
+}
+.feed-panel {
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 20;  
 }
