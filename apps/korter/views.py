@@ -18,3 +18,6 @@ def contract_view(request):
 
 def bill_view(request):
     return TemplateResponse(request, "korter/bills.html", {})
+
+def rules_view(request):
+    return TemplateResponse(request, "korter/rules.html", {})
