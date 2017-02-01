@@ -9,3 +9,6 @@ def default_view(request):
 
 def feed_view(request):
     return TemplateResponse(request, "korter/feed.html", {})
+
+def rules_view(request):
+    return TemplateResponse(request, "korter/rules.html", {})
