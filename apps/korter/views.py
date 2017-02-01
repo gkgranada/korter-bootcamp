@@ -11,4 +11,7 @@ def feed_view(request):
     return TemplateResponse(request, "korter/feed.html", {})
 
 def neighbour_view(request):
-    return TemplateResponse(request, "korter/neighbours.html", {}) 
+    return TemplateResponse(request, "korter/neighbours.html", {})
+
+def contract_view(request):
+    return TemplateResponse(request, "korter/contract.html", {})
