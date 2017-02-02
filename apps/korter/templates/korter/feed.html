@@ -3,15 +3,28 @@
 {% block title %}<title>Feed</title>{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-6 col-md-4">
-      {% include "korter/event.html" %}
+<div class="row">
+  <div class="col-xs-6 col-md-4" id="notificationsColumn">
+    <div class="row korter-feed"><h4>Notifications</h4></div>
+    <div class="row">
+      <div class="col-md-12">
+        {% include "korter/event.html" %}
+      </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-8">
-      {% include "korter/feedEntry.html" %}
-    </div>
-</div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-8" id="discussionsColumn">
+    <div class="row korter-feed"><h4>Discussions</h4></div>
+      <div class="row">
+        <div class="col-md-12">
+          {% include "korter/feedEntry.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          {% include "korter/feedDiscussion.html" %}
+        </div>
+      </div>
+  </div>
 </div>
 
 {% endblock %}
