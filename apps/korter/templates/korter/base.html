@@ -31,34 +31,32 @@
 
     <div id="wrapper">
         <!-- Navigation -->
-
-            <div id="default-sidebar" class="navbar-default sidebar korter-sidebar" role="navigation"margin-top="0">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li>
-                            <img id="korter-logo" src="{% static "img/korter-logo.png"%}" alt="Korter">
-                        </li>
-                        <li>
-                            <!-- Events and Feed -->
-                            <a class="sidebar-text" href="{% url "feed" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/feed-icon.png"%}" alt="Feed"> Feed</a>
-                        </li>
-                        <li>
-                            <a class="sidebar-text" href="{% url "bills" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/bills-icon.png"%}" alt="Bills"> Bills</a>
-                        </li>
-                        <li>
-                            <a class="sidebar-text" href="{% url "neighbours" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/neighbours-icon.png"%}" alt="Neighbours"> Neighbours</a>
-                        </li>
-                        <li>
-                            <a class="sidebar-text" href="{% url "documents" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/documents-icon.png"%}" alt="Documents"> Documents</a>
-                        </li>
-                        <li>
-                            <a class="sidebar-text" href="{% url "account" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/account-icon.png"%}" alt="Account"> Account</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
+        <div id="default-sidebar" class="navbar-default sidebar korter-sidebar" role="navigation"margin-top="0">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <img id="korter-logo" src="{% static "img/korter-logo.png"%}" alt="Korter">
+                    </li>
+                    <li>
+                        <!-- Events and Feed -->
+                        <a class="sidebar-text" href="{% url "feed" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/feed-icon.png"%}" alt="Feed"> Feed</a>
+                    </li>
+                    <li>
+                        <a class="sidebar-text" href="{% url "bills" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/bills-icon.png"%}" alt="Bills"> Bills</a>
+                    </li>
+                    <li>
+                        <a class="sidebar-text" href="{% url "neighbours" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/neighbours-icon.png"%}" alt="Neighbours"> Neighbours</a>
+                    </li>
+                    <li>
+                        <a class="sidebar-text" href="{% url "documents" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/documents-icon.png"%}" alt="Documents"> Documents</a>
+                    </li>
+                    <li>
+                        <a class="sidebar-text" href="{% url "account" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/account-icon.png"%}" alt="Account"> Account</a>
+                    </li>
+                </ul>
             </div>
-
+            <!-- /.sidebar-collapse -->
+        </div>
         <div id="page-wrapper">
             <div class="row">
                 <nav class="navbar navbar-default navbar-static-top korter-topbar" id="topbar">
@@ -105,7 +103,6 @@
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
-
     </div>
     <!-- /#wrapper -->
 
