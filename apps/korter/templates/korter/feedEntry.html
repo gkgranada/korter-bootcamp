@@ -1,22 +1,24 @@
 {% load static %}
 <div class="feed-panel panel panel-default">
   <div class="panel-body">
-    <div class="media">
-      <div class="media-left media-middle">
-        <a href="#">
-          <img class="media-object feedEntry-icon" src="{% static "img/usericon.png"%}" alt="User Icon">
-        </a>
-      </div>
-      <div class="media-body">
-        <p class="media-heading feedEntry-heading">Maari Maasikas - Apt 12</p>
+    <div class="row">
+      <div class="feed-panel-heading">
+        <div class="media">
+          <div class="media-left media-middle">
+            <!--div class="img-cropper"-->
+              <img class="media-object feedEntry-icon" src="{% static "img/female_usericon.jpg"%}" alt="User Icon">
+          <!--/div-->
+          </div>
+          <div class="media-body">
+            <p class="media-heading feedEntry-heading">Maari Maasikas - Apt 12</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
         <div class="form-group">
           <textarea class="form-control" rows="5" id="feedEntryForm" placeholder="Something on your mind?"></textarea>
         </div>
-      </div>
     </div>
     <div class="row">
       <div class="col-md-12">
