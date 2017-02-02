@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^contract/$', views.contract_view, name='contract'),
     url(r'^bills/$', views.bill_view, name='bills'),
     url(r'^rules/$', views.rules_view, name='rules'),
+    url(r'^account/$', views.account_view, name='account'),
 ]
