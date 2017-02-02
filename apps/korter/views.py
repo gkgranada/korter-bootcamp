@@ -6,3 +6,6 @@ from django.template.response import TemplateResponse
 
 def default_view(request):
     return TemplateResponse(request, "korter/base.html", {})
+
+def feed_view(request):
+    return TemplateResponse(request, "korter/feed.html", {})
