@@ -21,3 +21,6 @@ def bill_view(request):
 
 def rules_view(request):
     return TemplateResponse(request, "korter/rules.html", {})
+
+def account_view(request):
+    return TemplateResponse(request, "korter/account.html", {})
