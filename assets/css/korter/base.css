@@ -1,6 +1,13 @@
 body {
   background-color: #424242;
 }
+#korter-logo {
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding: 20%;
+}
 #default-sidebar {
   margin-top: 0;
   background-color: #424242;
@@ -54,6 +61,13 @@ body {
   margin-right: auto;
   width: 75%;
   padding: 20%;
+}
+.korter-sidebar img{
+  border: 0;
+  margin-left: 5;
+  margin-right: 5;
+  width: 15;
+
 }
 .topbar-icon {
   border-radius: 50%;

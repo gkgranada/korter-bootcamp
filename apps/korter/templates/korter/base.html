@@ -36,23 +36,23 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <img class="sidebar-icon" src="{% static "img/sidebar-icon.png"%}" alt="Sidebar Icon">
+                            <img id="korter-logo" src="{% static "img/korter-logo.png"%}" alt="Korter">
                         </li>
                         <li>
                             <!-- Events and Feed -->
-                            <a class="sidebar-text" href="{% url "feed" %}"><i class="glyphicon glyphicon-calendar"></i> Feed</a>
+                            <a class="sidebar-text" href="{% url "feed" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/feed-icon.png"%}" alt="Feed"> Feed</a>
                         </li>
                         <li>
-                            <a class="sidebar-text" href="{% url "bills" %}"><i class="glyphicon glyphicon-file"></i> Bills</a>
+                            <a class="sidebar-text" href="{% url "bills" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/bills-icon.png"%}" alt="Bills"> Bills</a>
                         </li>
                         <li>
-                            <a class="sidebar-text" href="{% url "neighbours" %}"><i class="glyphicon glyphicon-home"></i> Neighbours</a>
+                            <a class="sidebar-text" href="{% url "neighbours" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/neighbours-icon.png"%}" alt="Neighbours"> Neighbours</a>
                         </li>
                         <li>
-                            <a class="sidebar-text" href="{% url "documents" %}"><i class="glyphicon glyphicon-user"></i> Documents</a>
+                            <a class="sidebar-text" href="{% url "documents" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/documents-icon.png"%}" alt="Documents"> Documents</a>
                         </li>
                         <li>
-                            <a class="sidebar-text" href="{% url "account" %}"><i class="glyphicon glyphicon-user"></i> Account</a>
+                            <a class="sidebar-text" href="{% url "account" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/account-icon.png"%}" alt="Account"> Account</a>
                         </li>
                     </ul>
                 </div>
@@ -74,7 +74,7 @@
                                 <li> Sobra 37-4</li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <img class="topbar-icon rounded" src="{% static "img/female_usericon.jpg"%}" alt="User Icon">
+                                        <img class="topbar-icon" src="{% static "img/female_usericon.jpg"%}" alt="User Icon">
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-user">
