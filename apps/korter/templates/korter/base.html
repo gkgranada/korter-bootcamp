@@ -46,10 +46,10 @@
                             <a class="sidebar-text" href="#"><i class="glyphicon glyphicon-file"></i> Apartment<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a class="sidebar-text" href="flot.html">Bills</a>
+                                    <a href="{% url "bills" %}">Bills</a>
                                 </li>
                                 <li>
-                                    <a class="sidebar-text" href="morris.html">Contract</a>
+                                    <a href="{% url "contract" %}">Contract</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -58,16 +58,16 @@
                             <a class="sidebar-text" href="#"><i class="glyphicon glyphicon-home"></i> House<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a class="sidebar-text" href="flot.html">Neighbours</a>
+                                    <a href="{% url "neighbours" %}">Neighbours</a>
                                 </li>
                                 <li>
-                                    <a class="sidebar-text" href="morris.html">Rules</a>
+                                    <a href="{% url "rules" %}">Rules</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a class="sidebar-text" href="#"><i class="glyphicon glyphicon-user"></i> Account</a>
+                            <a class="sidebar-text" href="{% url "account" %}"><i class="glyphicon glyphicon-user"></i> Account</a>
                             <!-- /.nav-second-level -->
                         </li>
                     </ul>
@@ -94,7 +94,7 @@
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-user">
-                                        <li><a class="sidebar-icon" href="#"><i class="glyphicon glyphicon-user"></i> Account</a>
+                                        <li><a class="sidebar-icon" href="{% url "account" %}"><i class="glyphicon glyphicon-user"></i> Account</a>
                                         </li>
                                         <li><a class="sidebar-icon" href="#"><i class="glyphicon glyphicon-cog"></i> Settings</a>
                                         </li>
