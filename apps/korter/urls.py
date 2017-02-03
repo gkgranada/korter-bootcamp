@@ -11,4 +11,6 @@ urlpatterns = [
     url(r'^bills/$', views.bill_view, name='bills'),
     url(r'^rules/$', views.rules_view, name='rules'),
     url(r'^account/$', views.account_view, name='account'),
+    url(r'^register/$', views.registration_view, name='register'),
+    url(r'^login/$', views.login_view, name='login'),
 ]

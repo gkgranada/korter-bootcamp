@@ -27,3 +27,9 @@ def rules_view(request):
 
 def account_view(request):
     return TemplateResponse(request, "korter/account.html", {})
+# 
+# def login_view(request):
+#     return TemplateResponse(request, "korter/login.html", {})
+#
+# def registration_view(request):
+#     return TemplateResponse(request, "korter/register.html", {})
