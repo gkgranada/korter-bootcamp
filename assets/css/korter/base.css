@@ -137,6 +137,7 @@ body {
   padding-right: 20;
 }
 .feed-panel-heading {
+  padding-top: 10;
   padding-bottom: 10;
 }
 .feed-panel h4 {
@@ -219,4 +220,8 @@ body {
   text-align: center;
   vertical-align: middle;
   box-shadow: none;
+}
+
+.panel-content {
+  padding-top: 10;
 }
