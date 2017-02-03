@@ -142,3 +142,22 @@ body {
 #discussionsColumn {
   overflow-y: auto;
 }
+
+.nav-pills > li > a {
+  color: #424242 !important;
+}
+
+.nav-pills > li.active > a{
+  color: #424242 !important;
+  background-color: transparent !important;
+}
+
+.nav-pills > li.active {
+  border-bottom: solid 3px #5ebb00 !important;
+}
+
+#document-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
