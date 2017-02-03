@@ -106,11 +106,6 @@
   z-index: -1;
 }
 
-.btn-primary-outline {
-  background-color: transparent;
-  border-color: none;
-  color: #cbd8cc;
-}
 
 </style>
 
@@ -120,16 +115,16 @@
 <script src="{% static "boostrap4.min.js" %}"></script>
 
 <!-- Button trigger modal -->
-<button type="button modal-button" class="btn btn-primary-outline" data-toggle="modal" data-target="#loginModal">
-  Sign in
+<button type="button modal-button" class="btn btn-success" data-toggle="modal" data-target="#registerModal">
+  Register
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel">Sign in</h2>
+        <h2 class="modal-title" id="exampleModalLabel">Register new account</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -137,20 +132,14 @@
       <div class="modal-body">
           <form id="login-form">
               <div class="modal-body">
-                  <input id="login_username" class="form-control" type="text" placeholder="Username" required>
-                  <input id="login_password" class="form-control" type="password" placeholder="Password" required>
-                  <div class="checkbox">
-                      <label>
-                          <input type="checkbox"> Remember me
-                      </label>
-                  </div>
+                  <input id="register_username" class="form-control" type="text" placeholder="Username" required>
+                  <input id="register_password1" class="form-control" type="password" placeholder="Password" required>
+                  <input id="register_password2" class="form-control" type="password" placeholder="Password" required>
+                  <input id="register_email" class="form-control" type="email" placeholder="Email" required>
               </div>
               <div class="modal-footer">
                   <div>
-                      <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
-                  </div>
-                  <div>
-                      <button type="submit" class="btn btn-primary">Login</button>
+                      <button type="submit" class="btn btn-primary">Register</button>
                   </div>
               </div>
           </form>
