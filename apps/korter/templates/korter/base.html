@@ -124,6 +124,9 @@
     </div>
     <!-- /#wrapper -->
 
+    <!--Modal Template for documents to be signed-->
+    {% include "korter/documentsModal.html" %}
+
     <!-- jQuery -->
     <script src="{% static "js/jquery.js" %}"></script>
 
@@ -138,6 +141,16 @@
 
     <!-- SB Admin 2 JavaScript -->
     <script src="{% static "vendor/sb-admin-2/js/sb-admin-2.js" %}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('img').on('click', function() {
+                $("#showImg").empty();
+                var image = $(this).attr("src");
+                $("#showImg").append("<img class='img-responsive' src='" + image + "' />")
+            })
+        });
+    </script>
 
 </body>
 </html>

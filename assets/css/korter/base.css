@@ -6,6 +6,14 @@ body {
   height: 100%;
   padding-bottom: 100;
 }
+#rules-img{
+  height: 100%;
+  padding-top: 20;
+  padding-bottom: 100;
+  vertical-align: center;
+  text-align: center;
+  margin-left: 275;
+}
 #bill-img {
   height: 100%;
   padding-bottom: 100;
@@ -165,4 +173,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.thumbnail {
+  padding-right:0;
+  padding-left:0;
+  padding-top:0;
+  background-color: #5ebb00;
+}
+
+.thumbnail-container {
+  width: 220;
+  padding-top: 30;
+  margin:auto;
+}
+
+.thumbnail-img {
+  position: relative;
+  height: 200;
+  overflow: hidden;
+}
+
+.thumbnail-caption p{
+  padding-top: 20;
+  padding-bottom: 10;
+  text-align: center;
+  vertical-align: middle;
+  color: #f2f2f2;
+}
+
+.modal-content {
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: none;
 }
