@@ -26,6 +26,22 @@
     <link href="{% static "font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <script src="https://js.pusher.com/3.2/pusher.min.js"></script>
+    <script>
+
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+
+        var pusher = new Pusher('b566c533644423e0c7db', {
+            cluster: 'eu',
+            encrypted: true
+        });
+
+        var channel = pusher.subscribe('my-channel');
+            channel.bind('my-event', function(data) {
+            alert(data.message);
+        });
+    </script>
 </head>
 <body>
 
@@ -94,9 +110,11 @@
                 </nav>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    {% block content %}
-                    {% endblock %}
+                <div id="content-wrapper">
+                    <div class="col-lg-12">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
