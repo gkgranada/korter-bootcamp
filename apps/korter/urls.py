@@ -9,4 +9,4 @@ urlpatterns = [
     url(r'^neighbours/$', views.neighbours_view, name='neighbours'),
     url(r'^documents/$', views.documents_view, name='documents'),
     url(r'^account/$', views.account_view, name='account'),
-]
+    ]
