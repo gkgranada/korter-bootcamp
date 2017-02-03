@@ -1,0 +1,29 @@
+{% extends "korter/base.html" %}
+
+{% block title %}<title>Documents</title>{% endblock %}
+
+
+{% block content %}
+<div id="document-container">
+  <div class="col-md-12">
+
+    <ul class="nav nav-pills nav-justified">
+      <li class="active" ><a data-toggle="tab" href="#protocol"><h4>PROTOCOL</h4></a></li>
+      <li><a data-toggle="tab" href="#rules"><h4>RULES</h4></a></li>
+      <li><a data-toggle="tab" href="#menu2"><h4>CONTRACTS</h4></a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="protocol" class="tab-pane fade in active">
+        {% include "korter/documentsProtocols.html" %}
+      </div>
+      <div id="rules" class="tab-pane fade">
+        {% include "korter/documentsRules.html" %}
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        {% include "korter/documentsContracts.html" %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

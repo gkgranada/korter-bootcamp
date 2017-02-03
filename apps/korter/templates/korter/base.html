@@ -26,55 +26,53 @@
     <link href="{% static "font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <script src="https://js.pusher.com/3.2/pusher.min.js"></script>
+    <script>
+
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+
+        var pusher = new Pusher('b566c533644423e0c7db', {
+            cluster: 'eu',
+            encrypted: true
+        });
+
+        var channel = pusher.subscribe('my-channel');
+            channel.bind('my-event', function(data) {
+            alert(data.message);
+        });
+    </script>
 </head>
 <body>
 
     <div id="wrapper">
         <!-- Navigation -->
-
-            <div id="default-sidebar" class="navbar-default sidebar korter-sidebar" role="navigation"margin-top="0">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li>
-                            <img class="sidebar-icon" src="{% static "img/sidebar-icon.png"%}" alt="Sidebar Icon">
-                        </li>
-                        <li>
-                            <!-- Events and Feed -->
-                            <a class="sidebar-text" href="{% url "feed" %}"><i class="glyphicon glyphicon-calendar"></i> Feed</a>
-                        </li>
-                        <li>
-                            <a class="sidebar-text" href="#"><i class="glyphicon glyphicon-file"></i> Apartment<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="{% url "bills" %}">Bills</a>
-                                </li>
-                                <li>
-                                    <a href="{% url "contract" %}">Contract</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a class="sidebar-text" href="#"><i class="glyphicon glyphicon-home"></i> House<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="{% url "neighbours" %}">Neighbours</a>
-                                </li>
-                                <li>
-                                    <a href="{% url "rules" %}">Rules</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a class="sidebar-text" href="{% url "account" %}"><i class="glyphicon glyphicon-user"></i> Account</a>
-                            <!-- /.nav-second-level -->
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
+        <div id="default-sidebar" class="navbar-default sidebar korter-sidebar" role="navigation"margin-top="0">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <img id="korter-logo" src="{% static "img/korter-logo.png"%}" alt="Korter">
+                    </li>
+                    <li>
+                        <!-- Events and Feed -->
+                        <a class="sidebar-text" href="{% url "feed" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/feed-icon.png"%}" alt="Feed"> Feed</a>
+                    </li>
+                    <li>
+                        <a class="sidebar-text" href="{% url "bills" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/bills-icon.png"%}" alt="Bills"> Bills</a>
+                    </li>
+                    <li>
+                        <a class="sidebar-text" href="{% url "neighbours" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/neighbours-icon.png"%}" alt="Neighbours"> Neighbours</a>
+                    </li>
+                    <li>
+                        <a class="sidebar-text" href="{% url "documents" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/documents-icon.png"%}" alt="Documents"> Documents</a>
+                    </li>
+                    <li>
+                        <a class="sidebar-text" href="{% url "account" %}"><img class="sidebar-menu-icon" src="{% static "img/light-icons/account-icon.png"%}" alt="Account"> Account</a>
+                    </li>
+                </ul>
             </div>
-
+            <!-- /.sidebar-collapse -->
+        </div>
         <div id="page-wrapper">
             <div class="row">
                 <nav class="navbar navbar-default navbar-static-top korter-topbar" id="topbar">
@@ -90,7 +88,7 @@
                                 <li> Sobra 37-4</li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <img class="topbar-icon rounded" src="{% static "img/female_usericon.jpg"%}" alt="User Icon">
+                                        <img class="topbar-icon" src="{% static "img/female_usericon.jpg"%}" alt="User Icon">
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-user">
@@ -112,18 +110,22 @@
                 </nav>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    {% block content %}
-                    {% endblock %}
+                <div id="content-wrapper">
+                    <div class="col-lg-12">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
-
     </div>
     <!-- /#wrapper -->
+
+    <!--Modal Template for documents to be signed-->
+    {% include "korter/documentsModal.html" %}
 
     <!-- jQuery -->
     <script src="{% static "js/jquery.js" %}"></script>
@@ -139,6 +141,22 @@
 
     <!-- SB Admin 2 JavaScript -->
     <script src="{% static "vendor/sb-admin-2/js/sb-admin-2.js" %}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('img').on('click', function() {
+                //Title
+                $("#modalTitle").empty();
+                var title = $(this).attr("alt");
+                $("#modalTitle").append(title);
+
+                //Content
+                $("#showImg").empty();
+                var image = $(this).attr("src");
+                $("#showImg").append("<img class='img-responsive' src='" + image + "' />");
+            })
+        });
+    </script>
 
 </body>
 </html>
