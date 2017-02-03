@@ -1,6 +1,17 @@
 body {
   background-color: #424242;
 }
+#feed-bill img{
+  border: solid 1px #d6d6d6;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#feed-bill {
+  margin-left: 15;
+  margin-right: 15;
+}
+
 #content-wrapper {
   overflow-y: scroll;
   height: 100%;
@@ -150,9 +161,11 @@ body {
   border: 0;
 }
 #notificationsColumn {
+  overflow-x: hidden;
   overflow-y: auto;
 }
 #discussionsColumn {
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
