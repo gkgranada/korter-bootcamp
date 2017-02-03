@@ -145,9 +145,16 @@
     <script>
         $(document).ready(function() {
             $('img').on('click', function() {
+                //Title
+                $("#modalTitle").empty();
+                var title = $(this).attr("alt");
+                alert(title);
+                $("#modalTitle").append(title);
+
+                //Content
                 $("#showImg").empty();
                 var image = $(this).attr("src");
-                $("#showImg").append("<img class='img-responsive' src='" + image + "' />")
+                $("#showImg").append("<img class='img-responsive' src='" + image + "' />");
             })
         });
     </script>
