@@ -3,22 +3,41 @@
   <div class="panel-body">
     <div class="row">
       <div class="feed-panel-heading">
-        <div class="media">
-          <div class="media-left media-middle">
-            <!--div class="img-cropper"-->
-              <img class="media-object feedEntry-icon" src="{% static "img/female_usericon.jpg"%}" alt="User Icon">
-          <!--/div-->
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-left media-middle">
+              <!--div class="img-cropper"-->
+                <img class="media-object feedEntry-icon" src="{% static "img/female_usericon.jpg"%}" alt="User Icon">
+            <!--/div-->
+            </div>
+            <div class="media-body">
+              <p class="media-heading feedEntry-heading">Maari Maasikas - Apt 12</p>
+            </div>
           </div>
-          <div class="media-body">
-            <p class="media-heading feedEntry-heading">Maari Maasikas - Apt 12</p>
+        </div>
+        <div class="col-md-4">
+          <div id="discussionOptions" class="text-right">
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Discussion
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Problem
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Poll
+              </label>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
+      <div class="panel-content">
         <div class="form-group">
-          <textarea class="form-control" rows="5" id="feedEntryForm" placeholder="Something on your mind?"></textarea>
+          <textarea class="form-control" rows="5" id="feedEntryForm" placeholder="Spread the love!"></textarea>
         </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-12">
