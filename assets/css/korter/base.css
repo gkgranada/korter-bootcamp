@@ -269,3 +269,17 @@ body {
 #address{
   color: #5ebb00;
 }
+
+.registerInput {
+  padding: 10;
+}
+
+#datepicker {
+  text-align: left;
+  width: 100%;
+}
+
+#datepicker input{
+  padding: 5;
+  width: 80%;
+}
