@@ -1,4 +1,43 @@
 {% load static %}  
+
+<div class="collapse" id="newDiscussion">
+  <div class="feed-panel panel panel-default">
+    <div class="panel-body">
+      <div class="row media feedDiscussion">
+        <div class="row">
+          <div class="col-md-11">          
+            <div class="media-left media-middle">
+              <a href="#">
+                <img class="media-object feedEntry-icon" src="{% static "img/female_usericon.jpg"%}" alt="User Icon">
+              </a>
+            </div>
+            <div class="media-body">
+              <p class="media-heading feedDiscussion-heading">Maari Maasikas - Apt 12</p>
+              <p>3:37 PM 04/02/2017</p>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <i class="fa fa-comment-o feedDiscussion-icon"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Where is the love?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row feedDiscussion-reply">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Add your comment">
+          <span class="input-group-btn">
+            <button class="btn btn-default korter-feed-button" type="button">Reply</button>
+          </span>
+        </div><!-- /input-group -->
+      </div>
+    </div>
+  </div>
+</div>
 <div class="feed-panel panel panel-default">
   <div class="panel-body">
 

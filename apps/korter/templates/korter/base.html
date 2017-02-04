@@ -95,7 +95,7 @@
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-user">
-                                        <li><a class="sidebar-icon" href="#">Sobra 37-4</a>
+                                        <li><a id="address" class="sidebar-icon" href="#">Sobra 37-4</a>
                                         </li>
                                         <li><a class="sidebar-icon" href="#">KU Sobra 37-10</a>
                                         </li>
@@ -165,21 +165,21 @@
 
 
     <script>
-    $(".pop").popover({ trigger: "manual" , html: true, animation:false})
-      .on("mouseenter", function () {
-          var _this = this;
-          $(this).popover("show");
-          $(".popover").on("mouseleave", function () {
-              $(_this).popover('hide');
-          });
-      }).on("mouseleave", function () {
-          var _this = this;
-          setTimeout(function () {
-              if (!$(".popover:hover").length) {
-                  $(_this).popover("hide");
-              }
-          }, 300);
-    });
+        $(".pop").popover({ trigger: "manual" , html: true, animation:false})
+          .on("mouseenter", function () {
+              var _this = this;
+              $(this).popover("show");
+              $(".popover").on("mouseleave", function () {
+                  $(_this).popover('hide');
+              });
+          }).on("mouseleave", function () {
+              var _this = this;
+              setTimeout(function () {
+                  if (!$(".popover:hover").length) {
+                      $(_this).popover("hide");
+                  }
+              }, 300);
+        });
     </script>
 
 </body>

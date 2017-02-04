@@ -17,16 +17,16 @@
         </div>
         <div class="col-md-6">
           <div id="discussionOptions" class="text-right">
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-default active">
+            <div id="discussionOptionsGroup" class="btn-group" data-toggle="buttons">
+              <label id="button1" class="btn btn-default active">
                 <i class="fa fa-comment-o feedDiscussion-icon"></i>
                 <input type="radio" name="options" id="option1" autocomplete="off" checked> Discussion
               </label>
-              <label class="btn btn-default">
+              <label id="button2" class="btn btn-default">
                 <i class="glyphicon glyphicon-warning-sign feedDiscussion-icon"></i>
                 <input type="radio" name="options" id="option2" autocomplete="off"> Problem
               </label>
-              <label class="btn btn-default">
+              <label id="button3" class="btn btn-default">
                 <i class="glyphicon glyphicon-check feedDiscussion-icon"></i>
                 <input type="radio" name="options" id="option3" autocomplete="off"> Poll
               </label>
@@ -38,14 +38,14 @@
     <div class="row">
       <div class="panel-content">
         <div class="form-group">
-          <textarea class="form-control" rows="5" id="feedEntryForm" placeholder="Spread the love!"></textarea>
+          <textarea id="discussionMessage" class="form-control" rows="5" id="feedEntryForm" placeholder="Spread the love!"></textarea>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="text-right">
-          <button type="button" class="btn btn-default korter-feed-button">Post</button>
+          <button type="button" class="btn btn-default korter-feed-button" data-toggle="collapse" data-target="#newDiscussion" aria-expanded="false" aria-controls="newDiscussion">Post</button>
         </div>
       </div>
     </div>
