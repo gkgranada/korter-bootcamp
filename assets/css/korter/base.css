@@ -114,6 +114,10 @@ body {
 .feedDiscussion-heading {
   color: #5ebb00;
 }
+.feedDiscussion-icon {
+  color: #424242;
+  text-align: right;
+}
 .feedDiscussion-reply {
   padding-top: 15;
 }
