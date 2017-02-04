@@ -1,6 +1,9 @@
 body {
   background-color: #424242;
 }
+.modal-backdrop {
+  z-index:0;
+}
 #feed-bill img{
   border: solid 1px #d6d6d6;
   margin-left: auto;
