@@ -178,6 +178,10 @@ body {
   overflow-y: auto;
 }
 
+.navbar .nav {
+  overflow:visible;
+}
+
 .nav-pills > li > a {
   color: #424242 !important;
 }
