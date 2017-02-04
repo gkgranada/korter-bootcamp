@@ -146,6 +146,10 @@ body {
 .feed-signature {
   text-align: right;
 }
+.feed-timestamp {
+  text-align: right;
+  color: #5ebb00;
+}
 .korter-feed-button {
   color: #f2f2f2;
   background-color: #5ebb00;
@@ -224,4 +228,29 @@ body {
 
 .panel-content {
   padding-top: 10;
+}
+
+.well-body button{
+  font-size:250%;
+  vertical-align: top;
+  display: inline-block;
+  min-width: 75;
+  margin-left: 50;
+  margin-right: 50;
+  margin-top: 25;
+  margin-bottom: 25;
+}
+
+.well-heading {
+  padding:20;
+}
+
+.neighbour-img {
+  border-radius: 50%;
+  border: 0;
+  width: 100px;
+}
+
+.neightbour-img img {
+  width: 100%;
 }
