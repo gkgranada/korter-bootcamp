@@ -1,6 +1,9 @@
 body {
   background-color: #424242;
 }
+.modal-backdrop {
+  z-index:0;
+}
 #feed-bill img{
   border: solid 1px #d6d6d6;
   margin-left: auto;
@@ -114,6 +117,10 @@ body {
 .feedDiscussion-heading {
   color: #5ebb00;
 }
+.feedDiscussion-icon {
+  color: #424242;
+  text-align: right;
+}
 .feedDiscussion-reply {
   padding-top: 15;
 }
@@ -172,6 +179,10 @@ body {
 #discussionsColumn {
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.navbar .nav {
+  overflow:visible;
 }
 
 .nav-pills > li > a {
@@ -253,4 +264,8 @@ body {
 
 .neightbour-img img {
   width: 100%;
+}
+
+#address{
+  color: #5ebb00;
 }
